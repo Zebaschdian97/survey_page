@@ -1,21 +1,109 @@
+<!DOCKTYPE html>
 <html>
 	<head>
+			<style>
+			body{
+				font-family: sans-serif;
+				padding-left: 20%;
+				padding-right: 20%;
+				}
+
+
+			label{
+				font-size: 20px;
+				display: block;
+				padding-bottom: 10px;
+			}
+
+			input{
+				display: block;
+				width: auto;
+			}
+
+			form{
+				background-color: #1a8c60;
+				padding: 40px 40px 40px 40px;
+			}
+
+			input [type=checkbox]:not(old) + label,
+			input [type=radio]:not(old) + label{
+				display: inline-block;
+				margin-left: -28px;
+				padding-left: 28px;
+			}
+
+			textarea{
+				display: block;
+				width: 100%;
+			}
+
+			#button-area {
+				float: left;
+				width: 50%;
+				height: 50%;
+			}
+
+
+			</style>
+
+
+
 
 	</head>
-	
+
 
 	<body>
 		<h1 id="title">The Darts survey</h1>
-		<p id="description">This is a Darts survey (only for Darts)"</p>
+		<p id="description">This is a Darts survey (only for Darts)</p>
 		<form id="survey-form">
-			Name:<input type="text" name="name" id="name" required></input>
+			<label id="name-label">Name:</label>
+			<input type="text" name="name" id="name" required placeholder="First Name">
 			<br>
 			<br>
-			Email:<input type="email" name="email" id="Email" required></input>
-			Number:<input type="number" name="number" id="Number" required></input>
-			<input type="submit"></input>
+			<label id="email-label">Email: </label>
+			<input type="email" name="email" id="email" required placeholder="Your Email">
+			<br>
+			<br>
+			<label id="number-label">Number: </label>
+			<input type="number" name="number" id="number" min= "0" max="50" required placeholder="180">
+			<br>
+			<br>
+
+			<label id="favorite-label">Favorite Label: </label>
+			<select id="dropdown" name="Dart companies">
+				 <option value="Winmau">Winmau</option>
+				 <option value="unicorn">Unicorn</option>
+				 <option value="target">Target</option>
+				 <option value="reddragon">Reddragon</option>
+			</select>
+
+			<br>
+			<br>
+			<div id="button-area">
+				<label id="favorite-barrel">Favorite Barrel: </label>
+				<input type="radio" class="radio-inline" name="fav_type" value="straight">Straight
+				<input type="radio" class="radio-inline" name="fav_type" value="bullet">Bullet
+				<input type="radio" class="radio-inline" name="fav_type" value="drop">Drop
+
+			</div>
+
+			<div id="button-area">
+				<label id="favorite-grip">Favorite Grip: </label>
+				<input type="checkbox"  name="grip" value="ring">Ring-Grip
+				<input type="checkbox"  name="grip" value="shark">Shark-Grip
+				<input type="checkbox"  name="grip" value="micro">Micro-Grip
+			</div>
+			<br>
+			<textarea type="textarea" placeholder="Additional Comments"></textarea>
+
+
+			<input type="submit" id="submit">
+
+
 		</form>
-		<script type"text/javascript" src=""></script>
+
+
+		<script type"text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
 	</body>
 
